@@ -1,13 +1,28 @@
- //declare bacteria variables here   
- void setup()   
- {     
- 	//initialize bacteria variables here   
- }   
- void draw()   
- {    
- 	//move and show the bacteria   
- }  
- class Bacteria    
- {     
- 	//lots of java!   
- }    
+Food crumb;
+int nob = 1000;
+void setup() {
+  size(800, 600);
+  crumb = new Food(mouseX, mouseY);
+
+  bacteria = new Bacterium[nob];
+  for (int i = 0; i < bacteria.length; i++) {
+    Bacterium aB = new Bacterium();
+    bacteria[i] = aB;
+    bacteria[i].rColor();
+  }
+}
+
+void draw() {
+  background(255);
+
+  for (int i = 0; i < bacteria.length; i++) {
+
+    bacteria[i].move();
+    bacteria[i].show();
+  }
+  crumb.show();
+}
+void mousePressed() {
+  crumb.myX = mouseX;
+  crumb.myY = mouseY;
+}
