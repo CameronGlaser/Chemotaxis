@@ -1,3 +1,4 @@
+Bacterium[] bacteria;
 Food crumb;
 int nob = 1000;
 void setup() {
@@ -8,7 +9,6 @@ void setup() {
   for (int i = 0; i < bacteria.length; i++) {
     Bacterium aB = new Bacterium();
     bacteria[i] = aB;
-    bacteria[i].rColor();
   }
 }
 
