@@ -5,6 +5,7 @@ class Bacterium {
   Bacterium() {
     x=height/2;
     y=width/2;
+    rColor();
   }
   void move() {
     int incX, incY;
